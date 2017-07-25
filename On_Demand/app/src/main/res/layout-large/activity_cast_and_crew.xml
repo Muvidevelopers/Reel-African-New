@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_cast_and_crew"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/appBackgroundColor"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+
+    <LinearLayout
+        android:id="@+id/primary_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/castCrewTitleTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/toolbar"
+            android:layout_margin="10dp"
+            android:padding="10dp"
+            android:textColor="@color/castCrewTitleTextColor"
+            android:textSize="22dp"
+            android:textStyle="bold" />
+
+        <GridView
+            android:id="@+id/cast_crew_crid"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:numColumns="2"></GridView>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/noInternet"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/appBackgroundColor"
+        android:visibility="gone"
+        android:layout_below="@+id/toolbar"
+        android:padding="8dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:maxLines="4"
+            android:id="@+id/noInternetTextView"
+            android:singleLine="false"
+            android:layout_centerInParent="true"
+            android:textColor="@color/noInternetColor"
+            android:textSize="36sp"
+            android:textStyle="bold" />
+
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/noData"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/appBackgroundColor"
+        android:visibility="gone"
+        android:layout_below="@+id/toolbar"
+        android:padding="8dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:maxLines="4"
+            android:id="@+id/noDataTextView"
+            android:singleLine="false"
+            android:layout_centerInParent="true"
+            android:textColor="@color/noInternetColor"
+            android:textSize="36sp"
+            android:textStyle="bold" />
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

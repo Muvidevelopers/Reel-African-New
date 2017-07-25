@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/appBackgroundColor"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/primary_layout"
+        android:visibility="visible"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/purchaseHistoryTitleTextView"
+            android:text="Purchase History"
+            android:textSize="22dp"
+            android:layout_margin="5dp"
+            android:padding="5dp"
+            android:textColor="@color/pageTitleColor"
+            />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/purchase_history_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="vertical" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/noInternet"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/noInternetColor"
+        android:visibility="gone"
+        android:padding="8dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tryAgainButton"
+            android:gravity="center"
+            android:maxLines="4"
+            android:id="@+id/no_internet_text"
+            android:singleLine="false"
+
+            android:textColor="@color/noInternetColor"
+            android:textSize="36sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/tryAgainButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@color/button_background"
+            android:stateListAnimator="@null"
+            android:padding="8dp"
+            android:textAllCaps="false"
+            android:text="Try again !"
+            android:textColor="@color/buttonTextColor"
+            android:textSize="20dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/noData"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/appBackgroundColor"
+        android:visibility="gone"
+        android:layout_below="@+id/toolbar"
+        android:padding="8dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:maxLines="4"
+            android:id="@+id/noDataTextView"
+            android:singleLine="false"
+            android:layout_centerInParent="true"
+            android:textColor="@color/noInternetColor"
+            android:textSize="36sp"
+            android:textStyle="bold" />
+
+
+    </RelativeLayout>
+
+</LinearLayout>

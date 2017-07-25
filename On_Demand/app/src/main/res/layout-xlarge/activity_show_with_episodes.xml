@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/appBackgroundColor"
+    android:fillViewport="true">
+
+
+    <include layout="@layout/multipart_details_layout"
+        android:id="@+id/detailsRelativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+
+    <android.support.v7.widget.RecyclerView
+            android:id="@+id/featureContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+        android:layout_marginLeft="7dp"
+            android:layout_below="@+id/seasonRelativeLayout"
+            android:layout_gravity="center_vertical"
+
+            />
+
+    <RelativeLayout
+        android:id="@+id/noInternet"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/appBackgroundColor"
+        android:visibility="gone"
+        android:layout_below="@+id/toolbar"
+        android:padding="8dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:maxLines="4"
+            android:id="@+id/noInternetTextView"
+            android:singleLine="false"
+            android:layout_centerInParent="true"
+            android:textColor="@color/noInternetColor"
+            android:textSize="36sp"
+            android:textStyle="bold" />
+
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/noData"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/appBackgroundColor"
+        android:visibility="gone"
+        android:layout_below="@+id/toolbar"
+        android:padding="8dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:maxLines="4"
+            android:id="@+id/noDataTextView"
+            android:singleLine="false"
+            android:layout_centerInParent="true"
+            android:textColor="@color/noInternetColor"
+            android:textSize="36sp"
+            android:textStyle="bold" />
+
+
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_above="@+id/favorite">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="@color/textColor"
+            android:gravity="center"
+            android:id="@+id/viewRatingTextView"
+            android:clickable="true"
+            android:textStyle="bold"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="8dp"
+            android:layout_centerVertical="true"
+            android:textSize="14dp"
+            />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/seasonRelativeLayout"
+        android:padding="2dp"
+        android:layout_below="@+id/detailsRelativeLayout"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+
+      <!--  <TextView
+            android:id="@+id/seasonTitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:text=""
+            android:layout_marginLeft="5dp"
+            android:textColor="@android:color/white"
+            android:textSize="18dp" />-->
+
+<!--<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">-->
+     <!--   <Spinner
+            android:id="@+id/seasonSpinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:popupBackground="#ffffff"
+            android:layout_marginLeft="20dp"
+            android:layout_margin= "10dp"
+            android:background="@color/white"
+            android:layout_toRightOf="@+id/seasonTitleTextView"
+            android:theme="@style/ThemeOverlay.AppCompat.Light"
+            android:spinnerMode="dropdown"
+            android:padding="0dip"
+            />-->
+        <Spinner
+            android:id="@+id/seasonSpinner"
+            android:layout_width="150dp"
+            android:layout_height="38dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="9dp"
+            android:paddingRight="0dip"
+            android:popupBackground="#e2e1e1"
+            android:spinnerMode="dropdown"
+            android:visibility="visible"
+            android:overlapAnchor="false"
+            android:background="@drawable/spinner_theme"
+            android:theme="@style/applicationTheme"
+            />
+       <!-- <Spinner
+            android:id="@+id/seasonSpinner"
+            android:layout_width="wrap_content"
+            style="@android:style/Widget.Spinner.DropDown"
+            android:layout_height="38dp"
+            android:layout_marginLeft="20dp"
+            android:layout_margin= "10dp"
+            android:padding="0dip"
+            android:theme="@style/MyMaterialTheme"
+            android:popupBackground="#ffffff"
+            android:visibility="gone"
+            />-->
+       <!-- <Spinner
+            android:id="@+id/seasonSpinner"
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:popupBackground="#ffffff"
+            android:theme="@style/MyMaterialTheme"
+            android:spinnerMode="dropdown"
+            android:padding="0dip"
+            android:layout_marginLeft="20dp"
+            android:layout_margin= "10dp"
+            style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+            />-->
+
+   <!-- <ImageView
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:src="@drawable/"/>-->
+
+        <Button
+            android:id="@+id/btnMore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:backgroundTint="@color/button_background"
+            android:textSize="20dp"
+            android:text=""
+            android:stateListAnimator="@null"
+            android:layout_marginRight="10dp"
+            android:textAllCaps="false"
+            android:textColor="@color/buttonTextColor"
+            />
+
+
+    </RelativeLayout>
+    <fragment
+        android:id="@+id/cast_mini_controller"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        class="com.google.android.gms.cast.framework.media.widget.MiniControllerFragment"/>
+</RelativeLayout>
+

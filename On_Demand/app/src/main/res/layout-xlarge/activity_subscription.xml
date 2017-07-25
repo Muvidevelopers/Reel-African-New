@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_subscription"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/appBackgroundColor">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/subscriptionTitleTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="Select Your Plan"
+                android:textColor="@color/pageTitleColor"
+                android:textSize="28dp" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerViewSubscription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/subscriptionTitleTextView"
+                android:layout_margin="10dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:padding="10dp"
+                android:scrollbars="horizontal"
+
+                />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/recyclerViewSubscription"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/activationplan"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="90dp"
+                    android:layout_marginRight="90dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/button_radious"
+                    android:padding="10dp"
+                    android:text="Activate Plan"
+                    android:stateListAnimator="@null"
+                    android:textAllCaps="false"
+                    android:textColor="@color/buttonTextColor"
+                    android:textSize="20dp"
+                    android:visibility="gone" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

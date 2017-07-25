@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/appBackgroundColor"
+    android:orientation="vertical"
+    >
+
+    <!-- TODO: Update blank fragment layout -->
+    <ScrollView
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/categoryTitle"
+                android:layout_below="@+id/toolbar"
+                android:textSize="22dp"
+                android:layout_marginTop="15dp"
+                android:paddingTop="10dp"
+
+                android:paddingBottom="10dp"
+                android:layout_marginBottom="29dp"
+                android:text="contact us"
+                android:textStyle="normal"
+                android:layout_marginLeft="17dp"
+                android:textColor="@color/pageTitleColor"/>
+
+            <TextView
+                android:layout_width="332dp"
+                android:layout_height="wrap_content"
+                android:paddingLeft="5dp"
+                android:id="@+id/contactFormTitle"
+                android:text="Fill the form below."
+                android:layout_marginLeft="10dp"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:layout_marginBottom="29dp"
+                android:textColor="@color/contactFormTitle"
+                android:textSize="17dp" />
+
+            <EditText
+                android:id="@+id/contact_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Your Name"
+                android:inputType="textPersonName"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:layout_marginBottom="22dp"
+                android:imeOptions="actionDone"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:textColor="@color/editTextColor"
+                android:textColorHint="@color/hint_color"
+                android:textSize="18dp" />
+
+            <EditText
+                android:id="@+id/contact_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter your  E-mail id"
+                android:inputType="textEmailAddress"
+                android:imeOptions="actionDone"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="22dp"
+                android:textColor="@color/editTextColor"
+                android:textColorHint="@color/hint_color"
+                android:textSize="18dp" />
+
+            <EditText
+                android:id="@+id/contact_msg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Type your Message"
+                android:inputType="textMultiLine"
+                android:imeOptions="actionDone"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:layout_marginBottom="25dp"
+                android:layout_marginTop="28dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:textColor="@color/editTextColor"
+                android:textColorHint="@color/hint_color"
+                android:textSize="18dp" />
+
+            <Button
+                android:id="@+id/submit_cont"
+                android:layout_width="120dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/button_radious"
+                android:text="submit"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:textSize="15dp"
+                android:textColor="@color/buttonTextColor" />
+        </LinearLayout>
+    </ScrollView>
+
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom" />
+
+</LinearLayout>

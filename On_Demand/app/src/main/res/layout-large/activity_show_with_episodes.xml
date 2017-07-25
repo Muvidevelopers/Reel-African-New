@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/appBackgroundColor"
+    android:fillViewport="true">
+
+
+    <include
+        android:id="@+id/detailsRelativeLayout"
+        layout="@layout/multipart_details_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/featureContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/seasonRelativeLayout"
+
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="7dp"
+
+        />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/favorite"
+        android:layout_above="@id/seasonRelativeLayout"
+        android:orientation="horizontal"
+        android:gravity="right">
+
+        <ImageView
+            android:id="@+id/favorite_view_episode"
+            android:visibility="visible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/favorite_unselected"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="5dp"
+            />
+
+
+
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/seasonRelativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/detailsRelativeLayout"
+        >
+
+
+
+        <!-- <TextView
+             android:id="@+id/seasonTitleTextView"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignParentLeft="true"
+             android:layout_alignParentStart="true"
+             android:layout_centerVertical="true"
+             android:layout_gravity="center_vertical"
+             android:text=""
+             android:layout_marginLeft="5dp"
+             android:textColor="@android:color/white"
+             android:textSize="18dp" />-->
+
+        <!--<RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">-->
+        <!--   <Spinner
+               android:id="@+id/seasonSpinner"
+               android:layout_width="wrap_content"
+               style="@android:style/Widget.Spinner.DropDown"
+               android:layout_height="wrap_content"
+               android:layout_marginLeft="10dp"
+               android:layout_margin= "10dp"
+               android:padding="0dip"
+               android:theme="@style/MyMaterialTheme"
+               android:popupBackground="#ffffff"
+               android:visibility="gone"
+               />-->
+        <Spinner
+            android:id="@+id/seasonSpinner"
+            android:layout_width="150dp"
+            android:layout_height="38dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="9dp"
+            android:background="@drawable/spinner_theme"
+            android:overlapAnchor="false"
+            android:paddingRight="0dip"
+            android:popupBackground="#e2e1e1"
+            android:spinnerMode="dropdown"
+            android:theme="@style/applicationTheme"
+            android:visibility="gone" />
+        <!-- <ImageView
+             android:layout_width="25dp"
+             android:layout_height="25dp"
+             android:src="@drawable/"/>-->
+
+        <Button
+            android:id="@+id/btnMore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:backgroundTint="@color/button_background"
+            android:textAllCaps="false"
+            android:stateListAnimator="@null"
+            android:textColor="@color/buttonTextColor"
+            android:textSize="16dp" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/noInternet"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:background="@color/appBackgroundColor"
+        android:padding="8dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/noInternetTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:maxLines="4"
+            android:singleLine="false"
+            android:textColor="@color/noInternetColor"
+            android:textSize="36sp"
+            android:textStyle="bold" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/noData"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:background="@color/appBackgroundColor"
+        android:padding="8dp"
+
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/noDataTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:maxLines="4"
+            android:singleLine="false"
+            android:textColor="@color/noInternetColor"
+            android:textSize="36sp"
+            android:textStyle="bold" />
+
+
+    </RelativeLayout>
+    <fragment
+        android:id="@+id/cast_mini_controller"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        class="com.google.android.gms.cast.framework.media.widget.MiniControllerFragment"/>
+</RelativeLayout>
+

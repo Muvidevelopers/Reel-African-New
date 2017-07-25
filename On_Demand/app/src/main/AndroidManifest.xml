@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.release.reelAfrican">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+
+    <!-- Permission to use camera - required -->
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <!-- Camera features - recommended -->
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.flash"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CLEAR_APP_CACHE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:supportsRtl="true"
+        android:theme="@style/MyMaterialTheme">
+
+        <activity
+            android:name="com.release.reelAfrican.activity.SplashScreen"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.release.reelAfrican.activity.MainActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+
+        <!-- Activities responsible for gathering payment info -->
+        <activity
+            android:name="com.release.reelAfrican.activity.SearchActivity"
+            android:label=""
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.release.reelAfrican.activity.ViewMoreActivity"
+            android:label=""
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.release.reelAfrican.activity.LoginActivity"
+            android:label=""
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.release.reelAfrican.activity.RegisterActivity"
+            android:label=""
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.release.reelAfrican.activity.ProfileActivity"
+            android:label=""
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.release.reelAfrican.activity.ForgotPasswordActivity"
+            android:label=""
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.release.reelAfrican.activity.MovieDetailsActivity"
+            android:label=""
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.release.reelAfrican.activity.CastAndCrewActivity"
+            android:label=""
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.release.reelAfrican.activity.ShowWithEpisodesActivity"
+            android:label=""
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.release.reelAfrican.activity.Episode_list_Activity"
+            android:label=""
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.release.reelAfrican.activity.YouTubeAPIActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label=""
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.release.reelAfrican.activity.ThirdPartyPlayer"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label=""
+            android:windowSoftInputMode="stateHidden" />
+
+        <activity
+            android:name="com.release.reelAfrican.activity.TrailerActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label=""
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+
+        <activity xmlns:tools="http://schemas.android.com/tools"
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name"
+            android:theme="@style/FullyTranslucent"
+            tools:replace="android:theme" />
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="@string/fb_login_protocol_scheme" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+        <!--chromecast-->
+        <meta-data
+            android:name="com.google.android.gms.cast.framework.OPTIONS_PROVIDER_CLASS_NAME"
+            android:value="com.release.reelAfrican.CastOptionsProvider" />
+
+        <activity
+            android:name="com.release.reelAfrican.expandedcontrols.ExpandedControlsActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.CastVideosDark">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+            <!--
+                <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".VideoBrowserActivity"/>
+            -->
+        </activity>
+        <activity
+            android:name="com.release.reelAfrican.settings.CastPreference"
+            android:label="@string/action_settings"
+            android:theme="@style/Theme.AppCompat">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.release.reelAfrican.activity.ResolutionChangeActivity"
+            android:configChanges="screenSize|orientation"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <activity
+            android:name="com.release.reelAfrican.activity.Subtitle_Resolution"
+            android:configChanges="screenSize|orientation"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"></activity>
+
+
+        <activity
+            android:name="com.release.reelAfrican.activity.SubtitleList"
+            android:configChanges="screenSize|orientation"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"></activity>
+
+        <service android:name="com.release.reelAfrican.FCM_Support.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <service android:name="com.release.reelAfrican.FCM_Support.MyFirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name="com.release.reelAfrican.activity.PurchaseHistoryActivity"
+            android:label=""
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.release.reelAfrican.activity.TransactionDetailsActivity"
+            android:label=""
+            android:screenOrientation="portrait" />
+        <activity android:name="com.release.reelAfrican.activity.SubscriptionActivity" />
+        <activity android:name="com.release.reelAfrican.activity.PaymentInfoActivity" />
+        <activity android:name="com.release.reelAfrican.activity.PPvPaymentInfoActivity"></activity>
+
+        <activity
+            android:name="com.release.reelAfrican.activity.MyLibraryPlayer"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label=""
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="stateHidden" />
+
+
+        <activity
+            android:name="com.release.reelAfrican.activity.ExoPlayerActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label=""
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.release.reelAfrican.activity.ResumePopupActivity"
+            android:configChanges="screenSize|orientation"
+            android:label=""
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name="com.release.reelAfrican.activity.MyLibraryResumePopupActivity"
+            android:configChanges="screenSize|orientation"
+            android:label=""
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <activity android:name="com.release.reelAfrican.activity.MyDownloads"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name="com.release.reelAfrican.activity.MarlinBroadbandExample"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:windowSoftInputMode="stateHidden"/>
+
+        <service android:name="com.release.reelAfrican.FCM_Support.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <service android:name="com.release.reelAfrican.FCM_Support.MyFirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name="com.release.reelAfrican.activity.ManageDevices"
+            android:label=""
+            android:screenOrientation="portrait" />
+        <activity android:name="com.release.reelAfrican.activity.FavoriteActivity"
+            android:label=""
+            android:screenOrientation="portrait" />
+
+        <activity android:name="com.release.reelAfrican.activity.ReviewActivity"
+            android:label=""
+            android:screenOrientation="portrait" />
+
+        <activity android:name="com.release.reelAfrican.activity.FilterActivity"
+            android:label=""
+            android:screenOrientation="portrait" />
+
+        <activity android:name="com.release.reelAfrican.activity.CastCrewDetailsActivity"
+            android:label=""
+            android:screenOrientation="portrait" />
+
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="c60e07fef7b8a39ae8aabe64b8e3518d9960d29e" />
+    </application>
+
+</manifest>

@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/appBackgroundColor">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/transactionHistoryRowLayout"
+        android:background="#50202020"
+        android:layout_margin="10dp"
+        android:orientation="horizontal"
+        >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/transactionDetailLayout"
+        android:orientation="vertical"
+        android:layout_marginRight="10dp"
+        android:padding="10dp"
+        android:background="@color/pageTitleColor"
+        android:layout_weight="1.3">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/transactionTitleTextView"
+                android:text="Transaction"
+                android:textSize="22dp"
+                android:paddingLeft="5dp"
+                android:layout_weight="1.4"
+                android:textColor="@color/episodeBackgroundColor"
+                />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/activeAlertTextView"
+                android:layout_weight="2"
+                android:textColor="#737373"
+                android:text="Active"
+                android:gravity="center_vertical|right"
+                android:textSize="17dp"
+                android:layout_toRightOf="@+id/transactionTitleTextView"
+
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp"
+            android:id="@+id/transactionInvoiceLayout"
+            android:layout_below="@+id/transactionTitleTextView"
+            >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/transactionInvoiceTitleTextView"
+                android:text="Invoice :"
+                android:textSize="17dp"
+                android:paddingLeft="5dp"
+                android:textColor="@color/textColor"
+                android:layout_weight="1.4"/>
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/transactionInvoice"
+                android:layout_weight="2"
+                android:textColor="@color/textColor"
+                android:textSize="17dp"
+                android:gravity="center_vertical|left"
+                android:ellipsize="end"
+                android:text="$87343876463464656456486664"
+                android:maxLines="1"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp"
+            android:id="@+id/transactionOrderLayout"
+            android:layout_below="@+id/transactionInvoiceLayout"
+            >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/transactionOrderTitleTextView"
+                android:text="Order Id :"
+                android:textSize="17dp"
+                android:paddingLeft="5dp"
+                android:textColor="@color/textColor"
+                android:layout_weight="1.4"/>
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="center_vertical|left"
+                android:id="@+id/transactionOrderTextView"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:textColor="@color/textColor"
+                android:textSize="17dp"
+                android:text="sdvbkbkbdtchsdnjdskvnkjnvsdmbjbndjsbnrshwh"
+                />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp"
+            android:id="@+id/purchaseDateLayout"
+            android:layout_below="@+id/transactionOrderLayout"
+            >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/transactionPurchaseDateTitleTextView"
+                android:text="Purchase Date :"
+                android:textSize="17dp"
+                android:paddingLeft="5dp"
+                android:textColor="@color/textColor"
+                android:layout_weight="1.4"/>
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:id="@+id/transactionPurchaseDateTextView"
+                android:ellipsize="end"
+                android:textSize="17dp"
+                android:textColor="@color/textColor"
+                android:gravity="center_vertical|left"
+                android:text="$873438768832346876532356"
+                android:maxLines="2"
+
+                />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="3"
+            android:layout_gravity="center"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/showPriceTextView"
+                android:paddingLeft="5dp"
+                android:layout_toRightOf="@+id/transactionDetailLayout"
+                android:layout_alignParentRight="true"
+                android:text="$299"
+                android:textSize="30dp"
+                android:gravity="center"
+                android:layout_centerInParent="true" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Successs"
+                android:gravity="center_vertical|left"
+                android:textSize="17dp"
+                android:layout_toRightOf="@+id/transactionDetailLayout"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="center"
+                android:id="@+id/successTextView"
+                android:textColor="#737373"
+                android:layout_centerInParent="true" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/appBackgroundColor">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/toolbar"
+
+        >
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/episodeBackgroundColor"
+            >
+
+            <RelativeLayout
+                android:layout_width="200dp"
+                android:layout_height="111dp"
+                android:layout_gravity="center">
+
+                <ImageView
+                    android:layout_width="200dp"
+                    android:layout_height="111dp"
+                    android:src="@drawable/logo"
+                    android:id="@+id/episodeImageView"
+                    />
+
+                <ImageView
+                    android:id="@+id/movieImageOverlay"
+                    android:layout_width="200dp"
+                    android:layout_height="111dp"
+                    android:background="@drawable/episode_list_overlay"
+
+                    />
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/play"
+                    android:id="@+id/playButton"
+                    android:layout_centerInParent="true"
+                    />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center"
+                android:id="@+id/episodeDetailsLinearLayout"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/episodeTitleTextView"
+                    android:textColor="@color/editTextColor"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="10dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/episodeNameTextView"
+                    android:textColor="@color/editTextColor"
+                    android:textSize="13dp"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="8dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/episodeDateTextView"
+                    android:textColor="@color/editTextColor"
+                    android:textSize="11dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="8dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="10dp"
+            android:background="@color/transparent"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

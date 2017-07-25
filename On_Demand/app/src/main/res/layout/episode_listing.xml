@@ -1,0 +1,100 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/appBackgroundColor"
+    >
+    <include layout="@layout/toolbar"
+        android:id="@+id/toolbar"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:id="@+id/sectionTitle"
+        android:layout_below="@+id/toolbar"
+        android:textSize="18dp"
+        android:padding="6dp"
+        android:textStyle="bold"
+        android:textColor="@color/pageTitleColor"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_below="@id/sectionTitle">
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/episodelist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent"
+        android:scrollbars="none" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/loadingPanel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center">
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleInverse"
+            android:indeterminateDrawable="@drawable/progress_rawable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminateDuration="1000"
+            android:indeterminate="true"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/noInternet"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/appBackgroundColor"
+        android:visibility="gone"
+        android:layout_below="@+id/toolbar"
+        android:padding="8dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:maxLines="4"
+            android:id="@+id/noInternetTextView"
+            android:singleLine="false"
+            android:layout_centerInParent="true"
+            android:textColor="@color/noInternetColor"
+            android:textSize="36sp"
+            android:textStyle="bold" />
+
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/noData"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/appBackgroundColor"
+        android:visibility="gone"
+        android:layout_below="@+id/toolbar"
+        android:padding="8dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:maxLines="4"
+            android:id="@+id/noDataTextView"
+            android:singleLine="false"
+            android:layout_centerInParent="true"
+            android:textColor="@color/noInternetColor"
+            android:textSize="36sp"
+            android:textStyle="bold" />
+
+
+    </RelativeLayout>
+    <fragment
+        android:id="@+id/cast_mini_controller"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        class="com.google.android.gms.cast.framework.media.widget.MiniControllerFragment"/>
+</RelativeLayout>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/device_name"
+                    android:layout_width="fill_parent"
+                    android:layout_height="25dp"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:maxLines="2"
+                    android:text="vjbrihfofher"
+                    android:textColor="@color/white"
+                    android:textSize="17dp" />
+
+                <TextView
+                    android:id="@+id/os_version"
+                    android:layout_width="fill_parent"
+                    android:layout_height="25dp"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:maxLines="2"
+                    android:text="vjbrihfofher"
+                    android:textColor="@color/OsTextColor"
+                    android:textSize="14dp" />
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/delete_device"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.5"
+            android:ellipsize="end"
+            android:gravity="right"
+            android:maxLines="1"
+            android:text="Delete"
+            android:textColor="@color/button_background"
+            android:textSize="16dp" />
+
+
+</LinearLayout>

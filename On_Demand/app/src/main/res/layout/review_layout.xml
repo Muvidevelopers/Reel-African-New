@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/transparent"
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal"
+        >
+
+
+        <LinearLayout
+            android:id="@+id/castTitleLinearLayout"
+            android:layout_width="match_parent"
+            android:gravity="center_vertical"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <TextView
+                android:id="@+id/userNameTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="2"
+                android:ellipsize="end"
+                android:text="hfgfgf"
+                android:textStyle="bold"
+                android:gravity="center_vertical"
+                android:textColor="@color/textColor"
+                android:textSize="17dp" />
+            <RatingBar
+                android:id="@+id/ratingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/sectionTitle"
+                android:clickable="false"
+                android:focusable="false"
+                style="@style/customRatingBar"
+                android:layout_alignLeft="@+id/sectionTitle"
+                android:visibility="visible" />
+            <TextView
+                android:id="@+id/userreviewTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:text="jhhhhh"
+                android:gravity="center_vertical"
+                android:textColor="@color/textColor"
+                android:textSize="14dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/com_facebook_likeboxcountview_border_color"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent"
+    android:id="@+id/mainlayout"
+    android:orientation="vertical">
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:id="@+id/popupLayout"
+       android:padding="7dp"
+       android:layout_marginLeft="8dp"
+       android:layout_marginRight="8dp"
+
+       android:background="@drawable/resume_popup_radious"
+       android:orientation="vertical">
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:gravity="center"
+           android:maxLines="4"
+           android:id="@+id/resumeTitleTextView"
+           android:singleLine="false"
+           android:textColor="@color/textColor"
+           android:textSize="16dp"
+           android:textStyle="bold" />
+       <View
+           android:layout_width="match_parent"
+           android:layout_height="2dp"
+           android:layout_margin="8dp"
+           android:background="@color/dividerColor"
+           />
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal"
+           android:layout_marginRight="8dp"
+           android:layout_marginTop="8dp"
+           android:gravity="right">
+       <Button
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:textAllCaps="false"
+           android:background="@drawable/play_button_radious"
+           android:id="@+id/yesButton"
+           android:textSize="13dp"
+           android:stateListAnimator="@null"
+           android:padding="6dp"
+           android:textColor="@color/buttonTextColor"
+           android:layout_marginRight="12dp"
+           />
+       <Button
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:textAllCaps="false"
+           android:stateListAnimator="@null"
+           android:background="@drawable/cancel_button_radious"
+           android:textSize="13dp"
+           android:textColor="@color/cancel_button_text_color"
+           android:padding="6dp"
+           android:id="@+id/cancelButton"
+
+           />
+       </LinearLayout>
+   </LinearLayout>
+
+
+
+
+
+
+
+</LinearLayout>

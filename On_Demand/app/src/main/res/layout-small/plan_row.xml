@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:background="@color/appBackgroundColor"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+
+
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="30dp"
+            android:id="@+id/subscriptionDetailsTextView"
+            android:layout_below="@+id/subscriptionTitleTextView"
+            android:layout_centerHorizontal="true"
+            >
+
+            <RelativeLayout
+                android:layout_width="110dp"
+                android:layout_height="90dp"
+                android:background="#1111"
+                android:gravity="center"
+                android:id="@+id/relativeplannamelayout">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Quarterly"
+                    android:textColor="@color/pageTitleColor"
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:id="@+id/planNameTextView"/>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:id="@+id/lineardetails"
+                android:background="#202020"
+                android:gravity="center"
+                >
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="$ "
+                    android:textColor="#ddd"
+                    android:textSize="20dp"
+                    android:paddingTop="15dp"
+                    android:id="@+id/planPurchaseCurrenyTextView"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="125 "
+                    android:textSize="38dp"
+                    android:textColor="@color/button_background"
+                    android:id="@+id/planPurchaseValueTextView"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="(3 months )"
+                    android:textColor="#ddd"
+                    android:textSize="16dp"
+                    android:paddingTop="18dp"
+                    android:id="@+id/planPurchaseMonthTextView"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <ImageView
+            android:id="@+id/select_planMark"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:visibility="visible"
+            android:background="@drawable/mark"
+            android:layout_alignParentTop="true"
+            android:layout_alignLeft="@+id/subscriptionDetailsTextView"
+            android:layout_alignStart="@+id/subscriptionDetailsTextView"
+            android:layout_marginLeft="135dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="95dp" />
+    </RelativeLayout>
+</RelativeLayout>

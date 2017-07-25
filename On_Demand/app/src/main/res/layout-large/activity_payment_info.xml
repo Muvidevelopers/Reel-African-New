@@ -1,0 +1,423 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/appBackgroundColor"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="16dp"
+            android:paddingTop="16dp"
+
+            >
+
+
+            <RelativeLayout
+                android:id="@+id/creditCardLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/personalDetailsCardView"
+                android:layout_marginTop="0dp">
+
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="20dp">
+
+                    <Button
+                        android:id="@+id/scanButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:stateListAnimator="@null"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/button_bg_orange"
+                        android:text="Scan"
+                        android:textColor="@color/buttonTextColor"
+                        android:textSize="14dp"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/chargeDetailsTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/creditCardDetailsTitleTextView"
+                        android:layout_marginTop="10dp"
+                        android:maxLines="4"
+                        android:singleLine="false"
+                        android:text="Your card will be charged now:"
+                        android:textColor="@color/textColor"
+                        android:textSize="18dp" />
+
+                    <!-- <RelativeLayout
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:id="@+id/creditCardSaveLayout"
+                         android:background="@drawable/spinner_card_bg"
+                         android:layout_below="@id/chargeDetailsTextView"
+                         android:layout_marginTop="10dp">-->
+
+                    <Spinner
+                        android:id="@+id/creditCardSaveEditText"
+                        style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/chargeDetailsTextView"
+                        android:layout_marginTop="10dp"
+                        android:overlapAnchor="false"
+                        android:paddingLeft="6dp"
+                        android:paddingRight="6dp"
+                        android:popupBackground="#e1e1e1"
+                        android:spinnerMode="dropdown"
+                        android:textColorHint="@color/hint_color"
+                        android:theme="@style/ThemeOverlay.AppCompat.Light"
+                        android:visibility="gone" />
+                    <!--
+                                            </RelativeLayout>
+                    -->
+
+
+                    <EditText
+                        android:id="@+id/cardNumberEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@+id/nameOnCardEditText"
+                        android:layout_marginTop="10dp"
+                        android:ems="10"
+                        android:hint="Card Number"
+                        android:textSize="18dp"
+                        android:imeOptions="actionNext"
+                        android:inputType="number"
+                        android:paddingBottom="6dp"
+                        android:paddingLeft="12dp"
+                        android:paddingRight="6dp"
+                        android:paddingTop="6dp"
+                        android:textColor="@color/editTextColor"
+                        android:textColorHint="@color/hint_color" />
+
+                    <CheckBox
+                        android:id="@+id/saveCardCheckbox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/cardExpiryDetailsLayout"
+                        android:layout_marginTop="10dp"
+                        android:buttonTint="@color/button_background"
+                        android:text="Save this card for faster checkout"
+                        android:textColor="@color/buttonTextColor"
+                        android:visibility="gone" />
+
+                    <Button
+                        android:id="@+id/payNowButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_below="@+id/saveCardCheckbox"
+                        android:layout_marginLeft="50dp"
+                        android:layout_marginRight="50dp"
+                        android:stateListAnimator="@null"
+                        android:layout_marginTop="35dp"
+                        android:background="@drawable/button_radious"
+                        android:text="Pay Now"
+                        android:textAllCaps="false"
+                        android:textColor="@color/buttonTextColor"
+                        android:textSize="18dp"
+
+
+                        />
+
+                    <EditText
+                        android:id="@+id/nameOnCardEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_below="@+id/creditCardSaveEditText"
+                        android:layout_marginTop="12dp"
+                        android:ems="10"
+                        android:hint="Name on Card"
+                        android:imeOptions="actionNext"
+                        android:inputType="textPersonName"
+                        android:paddingBottom="6dp"
+                        android:paddingLeft="12dp"
+                        android:paddingRight="6dp"
+                        android:paddingTop="6dp"
+                        android:textSize="18dp"
+                        android:textColor="@color/editTextColor"
+                        android:textColorHint="@color/hint_color" />
+
+                    <TextView
+                        android:id="@+id/creditCardDetailsTitleTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginTop="38dp"
+                        android:layout_toEndOf="@+id/scanButton"
+                        android:layout_toRightOf="@+id/scanButton"
+                        android:text="Credit Card Details"
+                        android:textColor="@color/pageTitleColor"
+                        android:textSize="24dp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:id="@+id/cardExpiryDetailsLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_below="@+id/cardNumberEditText"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true">
+                        <!-- <RelativeLayout
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:id="@+id/cardexpiryMonthLayout"
+                             android:background="@drawable/spinner_card_bg">-->
+
+                        <Spinner
+                            android:id="@+id/cardExpiryMonthEditText"
+                            style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+                            android:layout_width="100dp"
+                            android:layout_height="60dp"
+                            android:overlapAnchor="false"
+                            android:paddingLeft="6dp"
+                            android:paddingRight="6dp"
+                            android:popupBackground="#e1e1e1"
+                            android:spinnerMode="dropdown"
+                            android:textColorHint="@color/hint_color"
+                            android:theme="@style/ThemeOverlay.AppCompat.Light" />
+                        <!--</RelativeLayout>-->
+
+
+                        <TextView
+                            android:id="@+id/yearLineTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="6dp"
+                            android:layout_marginTop="5dp"
+                            android:text="/"
+                            android:textColor="@color/alreadyHaveALoginButtonTextColor"
+                            android:textSize="30dp"
+                            android:textStyle="normal" />
+                        <!--<RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/cardExpiryYearLayout"
+                            android:layout_toRightOf="@+id/yearLineTextView"
+                            android:background="@drawable/spinner_card_bg">-->
+
+                        <!-- </RelativeLayout>-->
+
+
+                        <Spinner
+                            android:id="@+id/cardExpiryYearEditText"
+                            style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+                            android:layout_width="120dp"
+                            android:layout_height="60dp"
+                            android:layout_alignTop="@+id/securityCodeEditText"
+                            android:layout_toEndOf="@+id/yearLineTextView"
+                            android:layout_toRightOf="@+id/yearLineTextView"
+                            android:overlapAnchor="false"
+                            android:paddingLeft="6dp"
+                            android:paddingRight="6dp"
+                            android:popupBackground="#e1e1e1"
+                            android:spinnerMode="dropdown"
+                            android:textColorHint="@color/hint_color"
+                            android:theme="@style/ThemeOverlay.AppCompat.Light" />
+
+
+                        <EditText
+                            android:id="@+id/securityCodeEditText"
+                            android:layout_width="120dp"
+                            android:layout_height="60dp"
+                            android:layout_marginLeft="230dp"
+                            android:hint="CVV"
+                            android:imeOptions="actionGo"
+                            android:inputType="number"
+                            android:paddingLeft="12dp"
+                            android:paddingRight="6dp"
+                            android:textColor="@color/editTextColor"
+                            android:textColorHint="@color/hint_color" />
+
+                    </LinearLayout>
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+            <!-- <ImageButton
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:id="@+id/payByPalButton"
+                 android:src="@drawable/paypal"
+                 android:textColor="@color/white"
+                 android:textSize="14dp"
+                 android:background="@color/transparent"
+                 android:layout_below="@+id/creditCardLayout"
+                 android:layout_marginTop="12dp"
+                 android:visibility="gone"
+
+                 />-->
+            <RelativeLayout
+                android:id="@+id/withoutPaymentLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/personalDetailsCardView"
+                android:background="@color/appBackgroundColor"
+                android:layout_marginTop="20dp"
+                android:visibility="gone">
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/withoutPaymentCardView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    app:cardBackgroundColor="@color/appBackgroundColor"
+
+                    >
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:background="@color/appBackgroundColor"
+                        >
+
+                        <TextView
+                            android:id="@+id/withoutPaymentTitleTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginTop="10dp"
+                            android:text="You can watch the video at free of cost."
+                            android:textColor="@color/alreadyHaveALoginButtonTextColor"
+                            android:textSize="20dp" />
+
+                        <TextView
+                            android:id="@+id/withoutPaymentChargeDetailsTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/withoutPaymentTitleTextView"
+                            android:layout_marginTop="10dp"
+                            android:maxLines="4"
+                            android:singleLine="false"
+                            android:text="Your card will be charged now:"
+                            android:textColor="@color/textColor"
+                            android:textSize="16dp" />
+
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+
+                <Button
+                    android:id="@+id/nextButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/withoutPaymentCardView"
+                    android:layout_marginTop="12dp"
+                    android:stateListAnimator="@null"
+                    android:background="@drawable/button_bg_orange"
+                    android:text="Next"
+                    android:textColor="@color/buttonTextColor"
+                    android:textSize="18dp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginRight="50dp"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/personalDetailsCardView"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:padding="10dp"
+                android:visibility="gone">
+
+
+                <TextView
+                    android:id="@+id/lineTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/purchaseTextView"
+                    android:background="@color/alreadyHaveALoginButtonTextColor" />
+
+                <TextView
+                    android:id="@+id/showNameWithPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/lineTextView"
+                    android:layout_marginTop="14dp"
+                    android:textColor="@color/textColor"
+                    android:textSize="16dp" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/showNameWithPrice"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/couponCodeEditText"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@+id/showNameWithPrice"
+                        android:layout_weight="2"
+                        android:ems="10"
+                        android:hint="Enter Coupon Code"
+                        android:imeOptions="actionGo"
+                        android:inputType="text"
+                        android:paddingBottom="6dp"
+                        android:paddingLeft="12dp"
+                        android:paddingRight="6dp"
+                        android:paddingTop="6dp"
+                        android:textColor="@color/editTextColor"
+                        android:textColorHint="@color/hint_color" />
+
+                    <Button
+                        android:id="@+id/addCouponButton"
+                        android:layout_width="0dp"
+                        android:layout_height="44dp"
+                        android:layout_gravity="right"
+                        android:layout_marginLeft="15dp"
+                        android:stateListAnimator="@null"
+                        android:layout_weight="1"
+                        android:background="@drawable/button_radious"
+                        android:text="Apply"
+                        android:textAllCaps="false"
+                        android:textColor="@color/buttonTextColor"
+                        android:textSize="16dp"
+
+                        />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/purchaseTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:text="Purchase"
+                    android:textColor="@color/pageTitleColor"
+                    android:textSize="22dp"
+                    android:textStyle="bold" />
+
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+    </ScrollView>
+</LinearLayout>
